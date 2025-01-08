@@ -17,8 +17,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install node_modules
+      - name: Install node dependencies
         run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
 
       - name: Run tests
         run: npx playwright test
