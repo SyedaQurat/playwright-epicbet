@@ -4,13 +4,15 @@
   "description": "Test assignment - Playwright",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "test:spec": "npx playwright test"
+    "test": "npx playwright test"
   },
   "author": "Syeda",
   "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.49.1",
     "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "allure-playwright": "^3.0.8"
   }
 }

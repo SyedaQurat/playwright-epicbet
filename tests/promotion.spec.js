@@ -16,7 +16,7 @@ test('test: Click Promotion Button', async ({ page }) => {
 })
 
 
-test.only('test: Verify Promotional Ad appears', async ({ page }) => {
+test('test: Verify Promotional Ad appears', async ({ page }) => {
     test.info().annotations.push({ type: 'feature', description: 'Deny Button' })
     const promotion = new PromotionPage(page);
 

@@ -1,6 +1,11 @@
 import { defineConfig } from '@playwright/test';
 
 module.exports = defineConfig({
+    reporter: [
+        ['html',
+            { outputFolder: 'playwright-report'}
+        ]
+    ],
     use: {
         browserName: 'chromium',
         headless: true,
