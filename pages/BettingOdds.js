@@ -1,7 +1,8 @@
 class BettingOdds {
     constructor(page) {
         this.page = page
-        this.cateogryButton = this.page.locator('[data-testid="category-button"][data-testkey="1"]:has-text("football")');
+        //this.cateogryButton = this.page.locator('[data-testid="category-button"][data-testkey="1"]:has-text("football")')
+        this.cateogryButton = this.page.locator('[data-testid="category-button"][data-testkey="1"]')
         this.sportCategoryPage = this.page.locator('[data-testid="sport-category-page"] [class="ghost-box"]');
         this.outcomeButton = this.page.getByTestId('outcome-button').nth(0)
         this.odds = this.page.locator('[data-testid="outcome-button"][data-testkey="43975915"]');
@@ -19,9 +20,14 @@ class BettingOdds {
     async clickButton(button) {
         const isVisible = await button.isVisible();
         if (isVisible != null) {
-            await button.click()
+            try {
+                await button.click();
+            } catch (error) {
+                console.error('Failed to click:', error);
+            }
+        } else {
+            console.log('Button is not visible');
         }
-        else console.log('Button is not visible');
     }
 
     async elementVisible(element) {
