@@ -4,7 +4,7 @@ const setupAndTearDown = require('../resources/BaseClass');
 
 setupAndTearDown(test)
 
-test('test: Click Promotion Button', async ({ page }) => {
+test('test: Click Allow All Button', async ({ page }) => {
     test.info().annotations.push({ type: 'feature', description: 'Allow All Button' })
     const promotion = new PromotionPage(page);
 
@@ -16,7 +16,7 @@ test('test: Click Promotion Button', async ({ page }) => {
 })
 
 
-test('test: Verify Promotional Ad appears', async ({ page }) => {
+test('test: Click Deny Button', async ({ page }) => {
     test.info().annotations.push({ type: 'feature', description: 'Deny Button' })
     const promotion = new PromotionPage(page);
 

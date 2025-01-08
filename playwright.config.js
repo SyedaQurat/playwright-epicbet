@@ -3,7 +3,7 @@ import { defineConfig } from '@playwright/test';
 module.exports = defineConfig({
     reporter: [
         ['html',
-            { outputFolder: 'playwright-report'}
+            { outputFolder: 'playwright-report', open: "never"}
         ]
     ],
     use: {

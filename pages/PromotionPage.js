@@ -3,7 +3,7 @@ const {expect} = require("playwright/test");
 class PromotionPage {
     constructor(page) {
         this.page = page
-        this.promotionButton = this.page.getByText( 'Promotions' )
+        this.promotionButton = this.page.locator('[data-testkey="user.account.promotions"][tab-id="user.account.promotions"]:has-text("promotions")');
         this.myaccountTab = this.page.getByTestId('profile-tab-button')
         this.rewardTab = this.page.getByTestId('rewards-tab-button')
         this.link = this.page.locator('a[href="/en/ice-hockey-early-win"]:has-text("CALLING ALL HOCKEY FANS!")')
