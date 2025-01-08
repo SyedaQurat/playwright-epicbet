@@ -1,0 +1,16 @@
+{
+  "name": "epicbet-automation",
+  "version": "1.0.0",
+  "description": "Test assignment - Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:spec": "npx playwright test"
+  },
+  "author": "Syeda",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.49.1",
+    "playwright": "^1.49.1"
+  }
+}
