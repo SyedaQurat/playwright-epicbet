@@ -1,8 +1,7 @@
 class BettingOdds {
     constructor(page) {
         this.page = page
-        //this.cateogryButton = this.page.locator('[data-testid="category-button"][data-testkey="1"]:has-text("football")')
-        this.cateogryButton = this.page.locator('[data-testid="category-button"][data-testkey="1"]')
+        this.categoryButton = this.page.locator('[data-testid="category-button"][data-testkey="1"]:has-text("football")')
         this.sportCategoryPage = this.page.locator('[data-testid="sport-category-page"] [class="ghost-box"]');
         this.outcomeButton = this.page.getByTestId('outcome-button').nth(0)
         this.odds = this.page.locator('[data-testid="outcome-button"][data-testkey="43975915"]');
@@ -14,7 +13,7 @@ class BettingOdds {
     }
 
     async wait() {
-        await this.page.waitForTimeout(3000);
+        await this.page.setTimeout(60000);
     }
 
     async clickButton(button) {

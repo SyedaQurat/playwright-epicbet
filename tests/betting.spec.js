@@ -9,7 +9,7 @@ test('test: Click Betting to add 5', async ({ page }) => {
     const bettingOdds = new BettingOddsPage(page);
 
     await bettingOdds.wait()
-    await bettingOdds.clickButton(bettingOdds.cateogryButton)
+    await bettingOdds.clickButton(bettingOdds.categoryButton)
     await bettingOdds.wait()
     await bettingOdds.elementVisible(bettingOdds.sportCategoryPage)
     await bettingOdds.clickButton(bettingOdds.outcomeButton)
@@ -22,7 +22,7 @@ test('test: Click Betting to add 5', async ({ page }) => {
 test('test: Verify expected and actual pot return are same', async ({ page }) => {
     const bettingOdds = new BettingOddsPage(page);
 
-    await bettingOdds.clickButton(bettingOdds.cateogryButton)
+    await bettingOdds.clickButton(bettingOdds.categoryButton)
     await bettingOdds.elementVisible(bettingOdds.sportCategoryPage)
     await bettingOdds.clickButton(bettingOdds.outcomeButton)
     await bettingOdds.wait()
@@ -42,7 +42,7 @@ test('test: Verify expected and actual pot return are same', async ({ page }) =>
 test('test: Add zero and Place Bet button remains disabled', async ({ page }) => {
     const bettingOdds = new BettingOddsPage(page);
 
-    await bettingOdds.clickButton(bettingOdds.cateogryButton)
+    await bettingOdds.clickButton(bettingOdds.categoryButton)
     await bettingOdds.elementVisible(bettingOdds.sportCategoryPage)
     await bettingOdds.clickButton(bettingOdds.outcomeButton)
     await bettingOdds.wait()
