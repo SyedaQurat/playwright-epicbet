@@ -12,7 +12,6 @@ class CookieBannerPage {
         }
         catch (error) {
             console.error('Button not visible', error);
-            return false;
         }
         await button.click()
     }
@@ -21,12 +20,11 @@ class CookieBannerPage {
         await this.page.waitForTimeout(3000);
     }
 
-    async elementVisible(locator) {
+    async elementVisible(element) {
         try {
-            return await locator.isVisible();
+            await element.isVisible();
         } catch (error) {
             console.error('No element visibility:', error);
-            return false;
         }
     }
 }
